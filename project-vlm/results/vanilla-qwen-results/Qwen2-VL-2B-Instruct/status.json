@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "eval_id": "T20261014-171541",
+  "created_at": "2026-10-14T17:15:41.580462+02:00",
+  "datasets": {
+    "MME": {
+      "status": "done",
+      "prediction_file": "outputs/Qwen2-VL-2B-Instruct/T20261014-171541/Qwen2-VL-2B-Instruct_MME.xlsx",
+      "dataset_alias_name": "MME",
+      "dataset_name": "MME",
+      "updated_at": "2026-10-14T17:49:39.883089+02:00",
+      "judge_model": "gpt-4o-mini",
+      "reuse_aux": "all",
+      "dataset_class_name": "ImageYORNDataset",
+      "primary_metric": "OCR",
+      "metrics": {
+        "perception": 1492.841336534614,
+        "reasoning": 455.3571428571429,
+        "OCR": 65.0,
+        "artwork": 138.5,
+        "celebrity": 141.47058823529412,
+        "code_reasoning": 115.0,
+        "color": 173.33333333333334,
+        "commonsense_reasoning": 107.85714285714286,
+        "count": 135.0,
+        "existence": 200.0,
+        "landmark": 175.5,
+        "numerical_calculation": 55.0,
+        "position": 148.33333333333331,
+        "posters": 160.20408163265307,
+        "scene": 155.5,
+        "text_translation": 177.5
+      }
+    }
+  },
+  "model_name": "Qwen2-VL-2B-Instruct",
+  "commit": "8eca8e5a",
+  "argv": [
+    "run.py",
+    "--data",
+    "MME",
+    "--model",
+    "Qwen2-VL-2B-Instruct"
+  ],
+  "api_mode": false,
+  "world_size": 1,
+  "pred_format": "xlsx",
+  "eval_format": "csv",
+  "mode": "all",
+  "reuse": false,
+  "reuse_aux": "all",
+  "updated_at": "2026-10-14T17:49:39.878597+02:00"
+}

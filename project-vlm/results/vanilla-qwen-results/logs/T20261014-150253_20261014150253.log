@@ -1,0 +1,46 @@
+[2026-10-14 15:02:53] WARNING - vlmeval.__main__: --reuse is not set, this run will start from a fresh output directory
+[2026-10-14 15:02:53] INFO - vlmeval.__main__: =========== Qwen2-VL-2B-Instruct ===========
+[2026-10-14 15:02:53] INFO - vlmeval.__main__: ----------- MMBench_DEV_EN -----------
+[2026-10-14 15:02:56] INFO - vlmeval.__main__: {'nproc': 32, 'verbose': False, 'retry': 6, 'timeout': 600, 'model': 'gpt-4o-mini'}
+[2026-10-14 15:03:26] ERROR - vlmeval.__main__: Model Qwen2-VL-2B-Instruct x Dataset MMBench_DEV_EN (MMBench_DEV_EN) combination failed: CUDA error: no kernel image is available for execution on the device
+Search for `cudaErrorNoKernelImageForDevice' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+, skipping this combination.
+Traceback (most recent call last):
+  File "/home/infres/rocha-25/VLMEvalKit/run.py", line 861, in run_local_mode
+    model = infer_data_job(
+            ^^^^^^^^^^^^^^^
+  File "/home/infres/rocha-25/VLMEvalKit/vlmeval/inference.py", line 245, in infer_data_job
+    model = infer_data(
+            ^^^^^^^^^^^
+  File "/home/infres/rocha-25/VLMEvalKit/vlmeval/inference.py", line 199, in infer_data
+    response = model.generate(message=struct, dataset=dataset_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infres/rocha-25/VLMEvalKit/vlmeval/vlm/base.py", line 119, in generate
+    return self.generate_inner(message, dataset)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infres/rocha-25/VLMEvalKit/vlmeval/vlm/qwen2_vl/model.py", line 642, in generate_inner
+    return self.generate_inner_transformers(message, dataset=dataset)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infres/rocha-25/VLMEvalKit/vlmeval/vlm/qwen2_vl/model.py", line 492, in generate_inner_transformers
+    generated_ids = self.model.generate(
+                    ^^^^^^^^^^^^^^^^^^^^
+  File "/home/infres/rocha-25/VLMEvalKit/venv/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infres/rocha-25/VLMEvalKit/venv/lib/python3.11/site-packages/transformers/generation/utils.py", line 2433, in generate
+    self._prepare_special_tokens(generation_config, kwargs_has_attention_mask, device=device)
+  File "/home/infres/rocha-25/VLMEvalKit/venv/lib/python3.11/site-packages/transformers/generation/utils.py", line 2111, in _prepare_special_tokens
+    and isin_mps_friendly(elements=eos_token_tensor, test_elements=pad_token_tensor).any()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infres/rocha-25/VLMEvalKit/venv/lib/python3.11/site-packages/transformers/pytorch_utils.py", line 345, in isin_mps_friendly
+    return torch.isin(elements, test_elements)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.AcceleratorError: CUDA error: no kernel image is available for execution on the device
+Search for `cudaErrorNoKernelImageForDevice' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+
+[2026-10-14 15:03:26] INFO - vlmeval.__main__: Run Summary Report:
+[2026-10-14 15:03:26] INFO - vlmeval.__main__: 
+benchmark       infer_fail_rate    judge_fail_rate    primary_metric    primary_metric_value    skip_reason    eval_error
+--------------  -----------------  -----------------  ----------------  ----------------------  -------------  --------------------------------------------------------------------
+MMBench_DEV_EN  -                  -                  -                 -                       -              CUDA error: no kernel image is available for execution on the device
+                                                                                                               Search for `cudaErrorNoKernelImageForDevice' in htt...

@@ -1,0 +1,61 @@
+[2026-10-14 17:15:41] WARNING - vlmeval.__main__: --reuse is not set, this run will start from a fresh output directory
+[2026-10-14 17:15:41] INFO - vlmeval.__main__: =========== Qwen2-VL-2B-Instruct ===========
+[2026-10-14 17:15:41] INFO - vlmeval.__main__: ----------- MME -----------
+[2026-10-14 17:15:50] INFO - vlmeval.__main__: {'nproc': 32, 'verbose': False, 'retry': 6, 'timeout': 600, 'model': 'gpt-4o-mini'}
+[2026-10-14 17:48:59] INFO - vlmeval.api.gpt: Using API Base: https://api.openai.com/v1/chat/completions; API Key: 
+[2026-10-14 17:49:00] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:00] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:01] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:03] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:05] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:06] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:08] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:09] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:09] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:11] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:12] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:14] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:16] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:16] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:18] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:19] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:20] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:23] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:23] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:23] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:25] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:26] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:28] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:30] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:31] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:32] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:34] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:35] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:36] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:37] ERROR - vlmeval.api.gpt: <class 'KeyError'>: 'choices'
+[2026-10-14 17:49:39] INFO - vlmeval.__main__: The evaluation of model Qwen2-VL-2B-Instruct x dataset MME has finished! 
+[2026-10-14 17:49:39] INFO - vlmeval.__main__: Evaluation Results:
+[2026-10-14 17:49:39] INFO - vlmeval.__main__: 
+---------------------  --------
+perception             1492.84
+reasoning               455.357
+OCR                      65
+artwork                 138.5
+celebrity               141.471
+code_reasoning          115
+color                   173.333
+commonsense_reasoning   107.857
+count                   135
+existence               200
+landmark                175.5
+numerical_calculation    55
+position                148.333
+posters                 160.204
+scene                   155.5
+text_translation        177.5
+---------------------  --------
+[2026-10-14 17:49:40] INFO - vlmeval.__main__: Run Summary Report:
+[2026-10-14 17:49:40] INFO - vlmeval.__main__: 
+benchmark    infer_fail_rate    judge_fail_rate    primary_metric      primary_metric_value  skip_reason    eval_error
+-----------  -----------------  -----------------  ----------------  ----------------------  -------------  ------------
+MME          0.00% (0/2374)     0.00% (0/2374)     OCR                                   65  -              -

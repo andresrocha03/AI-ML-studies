@@ -1,0 +1,42 @@
+[2026-10-14 14:56:26] WARNING - vlmeval.__main__: --reuse is not set, this run will start from a fresh output directory
+[2026-10-14 14:56:26] INFO - vlmeval.__main__: =========== Qwen2-VL-2B-Instruct ===========
+[2026-10-14 14:56:26] INFO - vlmeval.__main__: ----------- MMBench_DEV_EN -----------
+[2026-10-14 14:56:40] INFO - vlmeval.__main__: {'nproc': 32, 'verbose': False, 'retry': 6, 'timeout': 600, 'model': 'gpt-4o-mini'}
+[2026-10-14 14:56:42] ERROR - vlmeval.__main__: Model Qwen2-VL-2B-Instruct x Dataset MMBench_DEV_EN (MMBench_DEV_EN) combination failed: FlashAttention2 has been toggled on, but it cannot be used due to the following error: the package flash_attn seems to be not installed. Please refer to the documentation of https://huggingface.co/docs/transformers/perf_infer_gpu_one#flashattention-2 to install Flash Attention 2., skipping this combination.
+Traceback (most recent call last):
+  File "/home/infres/rocha-25/VLMEvalKit/run.py", line 861, in run_local_mode
+    model = infer_data_job(
+            ^^^^^^^^^^^^^^^
+  File "/home/infres/rocha-25/VLMEvalKit/vlmeval/inference.py", line 245, in infer_data_job
+    model = infer_data(
+            ^^^^^^^^^^^
+  File "/home/infres/rocha-25/VLMEvalKit/vlmeval/inference.py", line 151, in infer_data
+    model = supported_VLM[model_name](**kwargs) if isinstance(model, str) else model
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infres/rocha-25/VLMEvalKit/vlmeval/vlm/qwen2_vl/model.py", line 311, in __init__
+    self.model = MODEL_CLS.from_pretrained(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infres/rocha-25/VLMEvalKit/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infres/rocha-25/VLMEvalKit/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 4971, in from_pretrained
+    model = cls(config, *model_args, **model_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infres/rocha-25/VLMEvalKit/venv/lib/python3.11/site-packages/transformers/models/qwen2_vl/modeling_qwen2_vl.py", line 1252, in __init__
+    super().__init__(config)
+  File "/home/infres/rocha-25/VLMEvalKit/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 2076, in __init__
+    self.config._attn_implementation_internal = self._check_and_adjust_attn_implementation(
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infres/rocha-25/VLMEvalKit/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 2686, in _check_and_adjust_attn_implementation
+    applicable_attn_implementation = self.get_correct_attn_implementation(
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/infres/rocha-25/VLMEvalKit/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 2714, in get_correct_attn_implementation
+    self._flash_attn_2_can_dispatch(is_init_check)
+  File "/home/infres/rocha-25/VLMEvalKit/venv/lib/python3.11/site-packages/transformers/modeling_utils.py", line 2422, in _flash_attn_2_can_dispatch
+    raise ImportError(f"{preface} the package flash_attn seems to be not installed. {install_message}")
+ImportError: FlashAttention2 has been toggled on, but it cannot be used due to the following error: the package flash_attn seems to be not installed. Please refer to the documentation of https://huggingface.co/docs/transformers/perf_infer_gpu_one#flashattention-2 to install Flash Attention 2.
+[2026-10-14 14:56:42] INFO - vlmeval.__main__: Run Summary Report:
+[2026-10-14 14:56:42] INFO - vlmeval.__main__: 
+benchmark       infer_fail_rate    judge_fail_rate    primary_metric    primary_metric_value    skip_reason    eval_error
+--------------  -----------------  -----------------  ----------------  ----------------------  -------------  ---------------------------------------------------------------------------------------------------------------------------
+MMBench_DEV_EN  -                  -                  -                 -                       -              FlashAttention2 has been toggled on, but it cannot be used due to the following error: the package flash_attn seems to b...

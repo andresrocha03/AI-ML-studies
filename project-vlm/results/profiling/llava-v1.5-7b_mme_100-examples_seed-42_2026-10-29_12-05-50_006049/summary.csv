@@ -1,0 +1,2 @@
+model,task,num_samples,mean_latency_ms,median_latency_ms,p95_latency_ms,memory_after_load_mb,max_peak_allocated_mb,max_peak_reserved_mb,max_additional_inference_memory_mb,mean_prefill_latency_ms
+liuhaotian/llava-v1.5-7b,mme,100,1631.021524821408,1627.4172585108317,1969.3220477725843,13535.7392578125,14300.48779296875,14412.0,764.74853515625,1477.2745373535156

@@ -1,0 +1,4 @@
+[2026-10-14 15:15:12] WARNING - vlmeval.__main__: --reuse is not set, this run will start from a fresh output directory
+[2026-10-14 15:15:12] INFO - vlmeval.__main__: =========== Qwen2-VL-2B-Instruct ===========
+[2026-10-14 15:15:12] INFO - vlmeval.__main__: ----------- MMBench_DEV_EN -----------
+[2026-10-14 15:15:14] INFO - vlmeval.__main__: {'nproc': 32, 'verbose': False, 'retry': 6, 'timeout': 600, 'model': 'gpt-4o-mini'}

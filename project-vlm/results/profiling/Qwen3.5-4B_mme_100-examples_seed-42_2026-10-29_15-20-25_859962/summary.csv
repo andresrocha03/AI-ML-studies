@@ -1,0 +1,2 @@
+model,task,num_samples,mean_latency_ms,median_latency_ms,p95_latency_ms,memory_after_load_mb,max_peak_allocated_mb,max_peak_reserved_mb,max_additional_inference_memory_mb,mean_prefill_latency_ms
+Qwen/Qwen3.5-4B,mme,100,649.1859555803239,643.101983005181,860.2397357288282,8666.98974609375,8790.515625,8898.0,123.52587890625,500.3585562133789

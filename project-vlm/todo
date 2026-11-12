@@ -1,0 +1,29 @@
+Todo
+
+- Review of most used benchmarks.
+  - Take them in the pruning techniques papers.
+- What are they testing?
+  - Search about it
+- What are their flaws?
+  - Maybe do some kind of test like the ones in MMStar paper.
+
+- Expand setup.
+  - Clearly organize setup and understand where is each thing and what they do.
+  - Add clear dataset, models, pruning methods and results folders.
+  - Add benchmarks suggested by stephan
+  - Add models (small... or until 7B) Qwen is a suggestion.
+
+My words
+
+- Benchmark failure modes:
+  - Ask for which token makes possible answering the question.
+  - Ask about something and remove it from the image: what does the model reply?
+
+- Pruning Failure Modes:
+  - I am thinking about separating localization images and testing. (Evaluate localization failure mode)
+  - What if i give two different images with the same question ? (Evalute if they are acutally looking the image).
+  - Where are the pruning agreeing? (Are they failing together ?)
+  - What if I make a question that "points in a direction", but demands to look in other? (What if I am focusing on a light and prune tokens that would be important to check if a train is coming on my direction?)
+  - https://arxiv.org/abs/2512.07580
+  - https://arxiv.org/abs/2506.10967
+  -
